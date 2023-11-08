@@ -125,6 +125,13 @@ function App() {
 										link: '/nas/framework/reports/structure',
 										description:'This is the first progress update, it details the resulting internal structure and user level tools in their current state. It also lays out the next stge of development.',
 										subnodes: []
+									},
+									{
+										sublabel: "Functionality",
+										icon: DocumentIcon,
+										link: '/nas/framework/reports/functionality',
+										description: 'This is the report which soldiifies a minimum viable product for this segment of the project, where we now have a framework with which to create a custom NAS software system. It details the functionality, usage, and future plans of the framework.',
+										subnodes: []
 									}
 								]
 							},
@@ -138,8 +145,8 @@ function App() {
 							{
 								sublabel: 'Documentation',
 								icon: DocumentIcon,
-								link:'',
-								description:'This is where the documentation for the user level module of the finished tool will go. The tool is not finished yet, so this has not yet been written.',
+								link:'https://github.com/LucAlexander/NeuroMorph/blob/main/README.md',
+								description:'This is the documentation for the user level module of the framework.',
 								subnodes: []
 							}
 						]
@@ -231,6 +238,7 @@ function App() {
 				<Route path="/nas/framework/reports" element={<CollectionPage subs={data.subnodes[2].subnodes[1].subnodes[0].subnodes} node={data.subnodes[2].subnodes[1]}/>}/>
 				<Route path="/nas/framework/reports/implementation" element={<ArticlePage url="/framework_implementation.pdf" subs={data.subnodes[2].subnodes} node={data.subnodes[2].subnodes[1].subnodes[0].subnodes[0]}/>}/>
 				<Route path="/nas/framework/reports/structure" element={<ArticlePage url="/progress_report_framework_0.pdf" subs={data.subnodes[2].subnodes} node={data.subnodes[2].subnodes[1].subnodes[0].subnodes[1]}/>}/>
+				<Route path="/nas/framework/reports/functionality" element={<ArticlePage url="/progress_report_framework_1.pdf" subs={data.subnodes[2].subnodes} node={data.subnodes[2].subnodes[1].subnodes[0].subnodes[2]}/>}/>
 			</Routes>
 		</Router>
 	);
